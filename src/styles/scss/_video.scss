@@ -47,8 +47,6 @@
     align-items: center;
     background-color: #0F1E36;
     color: #fff;
-
-
   }
 
   &-button {
@@ -57,11 +55,16 @@
     border: 0;
     outline: 0;
     margin: 15px;
+    min-width: 25px;
   }
 
   &-time {
     margin: 15px;
 
     font-weight: 700;
+  }
+
+  &-fullscreen {
+    margin-left: 5px;
   }
 }

@@ -19,6 +19,7 @@
     height: 300px;
     border-radius: 50%;
     margin-right: 30px;
+
     @media (max-width: 1024px) {
       margin-right: 0;
     }
@@ -56,6 +57,7 @@
     &__big {
       flex-grow: 1;
       font-size: 48px;
+
       @media (max-width: 650px) {
         font-size: 36px;
       }
@@ -64,6 +66,12 @@
 
   &-container {
     width: 100%;
+  }
+
+  &-footer {
+    .control-icon {
+      font-size: 34px;
+    }
   }
 
   &-list {

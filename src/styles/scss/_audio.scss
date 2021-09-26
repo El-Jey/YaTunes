@@ -48,9 +48,11 @@
   &-header {
     flex-grow: 1;
     font-size: 48px;
+
     @media (max-width: 1024px) {
       width: 100%;
     }
+
     @media (max-width: 650px) {
       font-size: 36px;
     }

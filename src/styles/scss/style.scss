@@ -1,3 +1,10 @@
+@import '~$root/styles/scss/radio';
+@import '~$root/styles/scss/audio';
+@import "~$root/styles/scss/video";
+
+@import "~$root/styles/normalize.css";
+@import "~$root/styles/font-awesome.min.css";
+
 html {
   box-sizing: border-box;
 }
@@ -51,6 +58,11 @@ p {
 
 main {
   padding-bottom: 100px;
+
+  .control-volume {
+    margin-right: 5px;
+    width: 100px;
+  }
 }
 
 .temp {
@@ -149,16 +161,7 @@ main {
   bottom: 0;
   z-index: 999;
   color: #fff
-
-
 }
-
-@import 'radio';
-
-@import 'audio';
-
-@import "video";
-
 
 .video {
   display: none;
@@ -182,9 +185,53 @@ main {
   &.active {
     display: flex;
   }
-}
 
+  &-footer {
+    .radio-pause {
+      background-color: transparent;
+      border: none;
+      font-size: 56px;
+      color: #fff;
+      margin-right: 5px;
+    }
+  }
+}
 
 .red-text {
   color: #F51E38;
+}
+
+.range__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.tooltip {
+  background-color: #03a9f4;
+  display: none;
+  padding: 3px 6px;
+  position: absolute;
+  top: -50%;
+  transform: translateX(-47%);
+
+  &.active {
+    display: block;
+  }
+
+  &:after {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #03a9f4;
+    color: #fff;
+    content: "";
+    left: 50%;
+    margin-left: -5px;
+    position: absolute;
+    top: 90%;
+  }
+}
+
+.control-icon {
+  cursor: pointer;
+  margin-right: 5px;
 }
